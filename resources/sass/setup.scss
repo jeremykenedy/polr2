@@ -1,0 +1,87 @@
+// Fonts
+@import url(https://fonts.googleapis.com/css?family=Nunito);
+@import url(https://fonts.googleapis.com/css?family=Lobster);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+// Variables
+@import 'variables';
+
+// Mixins
+@import 'mixins';
+
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+
+a {
+    color: $green;
+    &:hover {
+        color: darken($green, 10%);
+    }
+}
+
+body {
+    background: $body-bg url($setup-bg) no-repeat center center fixed;
+    @include vendor(background-size, cover);
+}
+
+label {
+    margin-top: 1em;
+}
+
+h4,
+label,
+p {
+    margin-top: 20px;
+}
+
+.navbar {
+    min-height: 4rem;
+}
+
+.navbar-brand {
+    font-family: "Lobster";
+}
+
+.setup-body {
+    font-family: $font-family-sans-serif;
+}
+
+.setup-logo {
+    height: 70px;
+    @include draggless();
+}
+
+.install-well {
+    margin-top: 5.5em;
+    @include media-breakpoint-up(sm) {
+        margin-top: 6.5em;
+    }
+    @include media-breakpoint-up(md) {
+        margin-top: 7em;
+    }
+    @include media-breakpoint-up(lg) {
+        margin-top: 7.5em;
+    }
+}
+
+.card-well {
+    background: $cream;
+    border: none;
+    padding: 1em;
+    &.card-well-rounded {
+        border-radius: 3px;
+    }
+}
+
+.btn {
+    text-transform: uppercase;
+}
+
+.footer-link {
+    a {
+        color: $gray;
+        &:hover {
+            color: darken($gray, 10%);
+        }
+    }
+}

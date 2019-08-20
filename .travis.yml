@@ -1,0 +1,18 @@
+language: php
+php:
+  - '7.1'
+  - '7.2'
+  - '7.3'
+
+services:
+  - mysql
+
+before_script:
+  - composer install
+  - mv tests/test_env .env
+  - mysql -e 'CREATE DATABASE polrci;'
+  - php artisan migrate --force
+  - composer install
+
+notifications:
+  email: false
